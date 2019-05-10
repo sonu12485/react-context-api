@@ -1,0 +1,13 @@
+.todo-list {
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+.todo {
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+  border: 2px solid #eee;
+  border-radius: 4px;
+}

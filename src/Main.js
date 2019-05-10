@@ -5,7 +5,11 @@ import { withRouter } from "react-router-dom";
 
 import { Navbar, NavbarBrand, NavItem, NavLink, Nav } from "reactstrap";
 
+import Context from "./context";
+
 class Main extends Component {
+  static contextType = Context;
+
   render() {
     return (
       <div>
@@ -23,6 +27,15 @@ class Main extends Component {
             </NavItem>
           </Nav>
         </Navbar>
+        <div className="todo-list">
+          {this.context.todos.map((todo, i) => {
+            return (
+              <div key={i} className="todo">
+                {todo.text}
+              </div>
+            );
+          })}
+        </div>
       </div>
     );
   }
